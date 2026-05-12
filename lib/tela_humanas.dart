@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexagon/hexagon.dart';
+import 'package:levelup/H.fase1.dart';
+import 'package:levelup/H.fase2.dart';
+import 'package:levelup/H.fase3.dart';
+import 'package:levelup/H.fase4.dart';
+import 'package:levelup/H.fase5.dart';
+import 'package:levelup/H.fase6.dart';
+import 'package:levelup/H.fase7.dart';
+import 'package:levelup/H.fase8.dart';
 
 class TelaHumanas extends StatefulWidget {
   const TelaHumanas({super.key});
@@ -40,7 +48,15 @@ class _TelaHumanasState extends State<TelaHumanas> {
                 Row(
                     children: [
                       const SizedBox(width: 55),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                        onTap: () { Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HFase1()
+                            )
+                        );
+                        },
+                        child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFFA7EACE),
                         elevation: 4,
@@ -52,13 +68,22 @@ class _TelaHumanasState extends State<TelaHumanas> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 210),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HFase2()
+                              )
+                          );
+                          },
+                      child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFFA7EACE),
                         elevation: 4,
@@ -70,13 +95,22 @@ class _TelaHumanasState extends State<TelaHumanas> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 55),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HFase3()
+                              )
+                          );
+                          },
+                      child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFFA7EACE),
                         elevation: 4,
@@ -88,13 +122,22 @@ class _TelaHumanasState extends State<TelaHumanas> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 210),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HFase4()
+                              )
+                          );
+                          },
+                      child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFFA7EACE),
                         elevation: 4,
@@ -106,13 +149,22 @@ class _TelaHumanasState extends State<TelaHumanas> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 55),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HFase5()
+                              )
+                          );
+                          },
+                      child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFFA7EACE),
                         elevation: 4,
@@ -124,13 +176,22 @@ class _TelaHumanasState extends State<TelaHumanas> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 210),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HFase6()
+                              )
+                          );
+                          },
+                      child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFFA7EACE),
                         elevation: 4,
@@ -142,13 +203,22 @@ class _TelaHumanasState extends State<TelaHumanas> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 55),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HFase7()
+                              )
+                          );
+                          },
+                      child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFFA7EACE),
                         elevation: 4,
@@ -160,13 +230,22 @@ class _TelaHumanasState extends State<TelaHumanas> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 210),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HFase8()
+                              )
+                          );
+                          },
+                      child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFFA7EACE),
                         elevation: 4,
@@ -177,6 +256,7 @@ class _TelaHumanasState extends State<TelaHumanas> {
                                 color: Color(0xFF7BC8A8)
                             )
                         ),
+                      )
                       )
                     ]
                 ),
