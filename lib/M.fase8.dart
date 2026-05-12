@@ -15,7 +15,7 @@ class _MFase8State extends State<MFase8> {
       Scaffold
         (
         appBar: AppBar(
-            backgroundColor: Color(0xFFF1BD8B)
+            backgroundColor: Color(0xFFFFD6AE)
         ),
 
       );

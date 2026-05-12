@@ -15,7 +15,7 @@ class _MFase3State extends State<MFase3> {
       Scaffold
         (
         appBar: AppBar(
-            backgroundColor: Color(0xFFF1BD8B)
+            backgroundColor: Color(0xFFFFD6AE)
         ),
 
       );
