@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexagon/hexagon.dart';
+import'package:levelup/C.Fase1.dart';
+import'package:levelup/C.Fase2.dart';
+import'package:levelup/C.Fase3.dart';
+import'package:levelup/C.Fase4.dart';
+import'package:levelup/C.Fase5.dart';
+import'package:levelup/C.Fase6.dart';
+import'package:levelup/C.Fase7.dart';
+import'package:levelup/C.Fase8.dart';
 
 class TelaCiencias extends StatefulWidget {
   const TelaCiencias({super.key});
@@ -40,7 +48,15 @@ class _TelaCienciasState extends State<TelaCiencias> {
                 Row(
                     children: [
                       const SizedBox(width: 55),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CFase1()
+                              )
+                          );
+                          },
+                      child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFF88BDED),
                         elevation: 4,
@@ -52,13 +68,22 @@ class _TelaCienciasState extends State<TelaCiencias> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 210),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CFase2()
+                              )
+                          );
+                          },
+                          child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFF88BDED),
                         elevation: 4,
@@ -70,13 +95,22 @@ class _TelaCienciasState extends State<TelaCiencias> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 55),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CFase3()
+                              )
+                          );
+                          },
+                          child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFF88BDED),
                         elevation: 4,
@@ -88,13 +122,22 @@ class _TelaCienciasState extends State<TelaCiencias> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 210),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CFase4()
+                              )
+                          );
+                          },
+                          child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFF88BDED),
                         elevation: 4,
@@ -106,13 +149,22 @@ class _TelaCienciasState extends State<TelaCiencias> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 55),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CFase5()
+                              )
+                          );
+                          },
+                          child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFF88BDED),
                         elevation: 4,
@@ -124,13 +176,22 @@ class _TelaCienciasState extends State<TelaCiencias> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 210),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CFase6()
+                              )
+                          );
+                          },
+                          child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFF88BDED),
                         elevation: 4,
@@ -142,13 +203,22 @@ class _TelaCienciasState extends State<TelaCiencias> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 55),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CFase7()
+                              )
+                          );
+                          },
+                          child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFF88BDED),
                         elevation: 4,
@@ -160,13 +230,22 @@ class _TelaCienciasState extends State<TelaCiencias> {
                             )
                         ),
                       )
+                      )
                     ]
                 ),
 
                 Row(
                     children: [
                       const SizedBox(width: 210),
-                      HexagonWidget.flat(
+                      GestureDetector(
+                          onTap: () { Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CFase8()
+                              )
+                          );
+                          },
+                          child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFF88BDED),
                         elevation: 4,
@@ -177,6 +256,7 @@ class _TelaCienciasState extends State<TelaCiencias> {
                                 color: Color(0xFF65A3DC)
                             )
                         ),
+                      )
                       )
                     ]
                 ),

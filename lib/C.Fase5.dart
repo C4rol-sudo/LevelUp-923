@@ -15,7 +15,7 @@ class _CFase5State extends State<CFase5> {
       Scaffold
         (
         appBar: AppBar(
-            backgroundColor: Color(0xFF88BDED)
+            backgroundColor: Color(0xFFFFD6AE)
         ),
 
       );
