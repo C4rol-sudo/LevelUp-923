@@ -15,7 +15,7 @@ class _conquistas extends State<Conquistas> {
       Scaffold
         (
         appBar: AppBar(
-            backgroundColor: Color(0xFFD0FFEC)
+            backgroundColor: Color(0xFFA7EACE)
         ),
 
       );
