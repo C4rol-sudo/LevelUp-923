@@ -14,9 +14,6 @@ class _HFase8State extends State<HFase8> {
     return
       Scaffold
         (
-        appBar: AppBar(
-            backgroundColor: Color(0xFFA7EACE)
-        ),
       );
   }
 }
