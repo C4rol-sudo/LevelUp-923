@@ -15,7 +15,7 @@ class _LFase1State extends State<LFase1> {
       Scaffold
         (
         appBar: AppBar(
-            backgroundColor: Color(0xFFFFD6AE)
+            backgroundColor: Color(0xFFE8ACE3)
         ),
 
       );

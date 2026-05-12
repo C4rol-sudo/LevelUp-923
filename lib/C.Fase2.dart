@@ -15,7 +15,7 @@ class _CFase2State extends State<CFase2> {
       Scaffold
         (
         appBar: AppBar(
-            backgroundColor: Color(0xFFFFD6AE)
+            backgroundColor: Color(0xFF88BDED)
         ),
 
       );

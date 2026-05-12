@@ -15,7 +15,7 @@ class _perfil extends State<Perfil> {
       Scaffold
         (
         appBar: AppBar(
-          backgroundColor: Color(0xFFE4D8FF)
+          backgroundColor: Color(0xFFC8B7ED)
         ),
 
       );

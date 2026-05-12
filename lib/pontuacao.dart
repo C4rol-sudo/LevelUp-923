@@ -15,7 +15,7 @@ class _pontuacao extends State<Pontuacao> {
       Scaffold
         (
         appBar: AppBar(
-            backgroundColor: Color(0xFFFFD8FC)
+            backgroundColor: Color(0xFFE8ACE3)
         ),
 
       );
