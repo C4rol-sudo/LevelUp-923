@@ -45,20 +45,7 @@ class _EscolhaState extends State<Escolha> {
             Row(
               children:[
                 SizedBox(width: 25),
-                ElevatedButton.icon(
-                  icon: Icon(
-                    Icons.menu_book,
-                    size: 20,
-                      color: Color(0xFFDD97D7)
-                  ),
-
-                  label: Text(
-                      'Linguagens',
-                          style: GoogleFonts.chewy(
-                            fontSize: 20,
-                            color: Color(0xFFDD97D7)
-                          )
-                  ),
+                ElevatedButton(
                   onPressed: (){
                     Navigator.push(
                       context,
@@ -71,29 +58,35 @@ class _EscolhaState extends State<Escolha> {
                       color: Color(0xFFF4BAF0),
                       width: 3.0,
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 60),
+                    padding: EdgeInsets.symmetric(horizontal: 34, vertical: 40),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                     elevation: 4
-                  )
+                  ),
+                  child:
+                    Column(
+                      children:[
+                        Icon(
+                            Icons.menu_book,
+                            size: 40,
+                            color: Color(0xFFDD97D7)
+                        ),
+
+                        Text(
+                            'Linguagens',
+                            style: GoogleFonts.chewy(
+                                fontSize: 20,
+                                color: Color(0xFFDD97D7)
+                            )
+                        ),
+                    ]
+                  ),
 
                 ),
                 const SizedBox(width: 15),
-                ElevatedButton.icon(
-                    icon: Icon(
-                        Icons.account_balance,
-                        size: 20,
-                        color: Color(0xFF76C6A1)
-                    ),
+                ElevatedButton(
 
-                    label: Text(
-                        'Humanas',
-                        style: GoogleFonts.chewy(
-                            fontSize: 20,
-                            color: Color(0xFF76C6A1)
-                        )
-                    ),
                     onPressed: (){
                       Navigator.push(
                         context,
@@ -106,11 +99,28 @@ class _EscolhaState extends State<Escolha> {
                         color: Color(0xFF9AD6BA),
                         width: 3.0,
                       ),
-                      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 60),
+                      padding: EdgeInsets.symmetric(horizontal: 44, vertical: 40),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
                       elevation: 4
+                    ),
+                    child: Column(
+                      children:[
+                      Icon(
+                          Icons.account_balance,
+                          size: 40,
+                          color: Color(0xFF76C6A1)
+                      ),
+                        Text(
+                            'Humanas',
+                            style: GoogleFonts.chewy(
+                                fontSize: 20,
+                                color: Color(0xFF76C6A1)
+                            )
+                        ),
+
+                      ]
                     )
 
                 ),
@@ -120,20 +130,7 @@ class _EscolhaState extends State<Escolha> {
             Row(
               children: [
                 const SizedBox(width: 25),
-                ElevatedButton.icon(
-                    icon: Icon(
-                        Icons.biotech,
-                        size: 20,
-                        color: Color(0xFF699FCC)
-                    ),
-
-                    label: Text(
-                        'Ciências',
-                        style: GoogleFonts.chewy(
-                            fontSize: 20,
-                            color: Color(0xFF699FCC)
-                        )
-                    ),
+                ElevatedButton(
                     onPressed: (){
                       Navigator.push(
                         context,
@@ -146,29 +143,35 @@ class _EscolhaState extends State<Escolha> {
                         color: Color(0xFF9CC1E3),
                         width: 3.0,
                       ),
-                      padding: EdgeInsets.symmetric(horizontal: 33, vertical: 60),
+                      padding: EdgeInsets.symmetric(horizontal: 47, vertical: 40),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
                       elevation: 4
+                    ),
+                    child: Column(
+
+                      children:[
+                        Icon(
+                            Icons.biotech,
+                            size: 40,
+                            color: Color(0xFF699FCC)
+                        ),
+
+                        Text(
+                            'Ciências',
+                            style: GoogleFonts.chewy(
+                                fontSize: 20,
+                                color: Color(0xFF699FCC)
+                            )
+                        ),
+                      ]
+
                     )
 
                 ),
                 const SizedBox(width: 15),
-                ElevatedButton.icon(
-                    icon: Icon(
-                        Icons.calculate,
-                        size: 20,
-                        color: Color(0xFFDCA56F)
-                    ),
-
-                    label: Text(
-                        'Matemática',
-                        style: GoogleFonts.chewy(
-                            fontSize: 20,
-                            color: Color(0xFFDCA56F)
-                        )
-                    ),
+                ElevatedButton(
                     onPressed: (){
                       Navigator.push(
                         context,
@@ -181,11 +184,29 @@ class _EscolhaState extends State<Escolha> {
                         color: Color(0xFFE8BB8E),
                         width: 3.0,
                       ),
-                      padding: EdgeInsets.symmetric(horizontal: 17, vertical: 60),
+                      padding: EdgeInsets.symmetric(horizontal: 31, vertical: 40),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
                       elevation: 4
+                    ),
+                    child: Column(
+                      children:[
+                        Icon(
+                            Icons.calculate,
+                            size: 40,
+                            color: Color(0xFFDCA56F)
+                        ),
+
+                        Text(
+                            'Matemática',
+                            style: GoogleFonts.chewy(
+                                fontSize: 20,
+                                color: Color(0xFFDCA56F)
+                            )
+                        ),
+
+                      ]
                     )
 
                 ),

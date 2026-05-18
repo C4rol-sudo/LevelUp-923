@@ -24,7 +24,7 @@ class _TelaCienciasState extends State<TelaCiencias> {
       Scaffold
         (
         appBar: AppBar(
-            backgroundColor: Color(0xFFD88BDE)
+            backgroundColor: Color(0xFF88BDED)
         ),
         backgroundColor: Color(0xFFBDE0FE),
           body:Stack(
