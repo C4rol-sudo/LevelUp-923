@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:levelup/tela_inicial.dart';
+import 'package:levelup/telas/tela_inicial.dart';
 
 void main() {
 
