@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexagon/hexagon.dart';
-import'package:levelup/M.fase1.dart';
-import'package:levelup/M.fase2.dart';
-import'package:levelup/M.fase3.dart';
-import'package:levelup/M.fase4.dart';
-import'package:levelup/M.fase5.dart';
-import'package:levelup/M.fase6.dart';
-import'package:levelup/M.fase7.dart';
-import'package:levelup/M.fase8.dart';
+import'package:levelup/fases/M.fase1.dart';
+import'package:levelup/fases/M.fase2.dart';
+import'package:levelup/fases/M.fase3.dart';
+import'package:levelup/fases/M.fase4.dart';
+import'package:levelup/fases/M.fase5.dart';
+import'package:levelup/fases/M.fase6.dart';
+import'package:levelup/fases/M.fase7.dart';
+import'package:levelup/fases/M.fase8.dart';
 
 class TelaMatematica extends StatefulWidget {
   const TelaMatematica({super.key});

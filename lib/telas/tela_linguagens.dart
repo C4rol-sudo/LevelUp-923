@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexagon/hexagon.dart';
-import 'package:levelup/L.fase1.dart';
-import 'package:levelup/L.fase2.dart';
-import 'package:levelup/L.fase3.dart';
-import 'package:levelup/L.fase4.dart';
-import 'package:levelup/L.fase5.dart';
-import 'package:levelup/L.fase6.dart';
-import 'package:levelup/L.fase7.dart';
-import 'package:levelup/L.fase8.dart';
+import 'package:levelup/telas/linguagens.dart';
+import 'package:levelup/fases/L.fase2.dart';
+import 'package:levelup/fases/L.fase3.dart';
+import 'package:levelup/fases/L.fase4.dart';
+import 'package:levelup/fases/L.fase5.dart';
+import 'package:levelup/fases/L.fase6.dart';
+import 'package:levelup/fases/L.fase7.dart';
+import 'package:levelup/fases/L.fase8.dart';
 
 class TelaLinguagens extends StatefulWidget {
   const TelaLinguagens({super.key});
@@ -18,22 +18,6 @@ class TelaLinguagens extends StatefulWidget {
 }
 
 class _TelaLinguagensState extends State<TelaLinguagens> {
-  List<IconData> icones1 = [
-    Icons.menu_book,
-    Icons.palette,
-    Icons.language,
-    Icons.history_edu,
-    Icons.directions_run,
-    Icons.translate,
-  ];
-  List<IconData> icones2 = [
-    Icons.history_edu,
-    Icons.directions_run,
-    Icons.translate,
-    Icons.menu_book,
-    Icons.palette,
-    Icons.language,
-  ];
   @override
   Widget build(BuildContext context) {
     return

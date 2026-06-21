@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexagon/hexagon.dart';
-import 'package:levelup/H.fase1.dart';
-import 'package:levelup/H.fase2.dart';
-import 'package:levelup/H.fase3.dart';
-import 'package:levelup/H.fase4.dart';
-import 'package:levelup/H.fase5.dart';
-import 'package:levelup/H.fase6.dart';
-import 'package:levelup/H.fase7.dart';
-import 'package:levelup/H.fase8.dart';
+import 'package:levelup/fases/H.fase1.dart';
+import 'package:levelup/fases/H.fase2.dart';
+import 'package:levelup/fases/H.fase3.dart';
+import 'package:levelup/fases/H.fase4.dart';
+import 'package:levelup/fases/H.fase5.dart';
+import 'package:levelup/fases/H.fase6.dart';
+import 'package:levelup/fases/H.fase7.dart';
+import 'package:levelup/fases/H.fase8.dart';
 
 class TelaHumanas extends StatefulWidget {
   const TelaHumanas({super.key});

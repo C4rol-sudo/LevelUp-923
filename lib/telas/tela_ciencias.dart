@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexagon/hexagon.dart';
-import'package:levelup/C.Fase1.dart';
-import'package:levelup/C.Fase2.dart';
-import'package:levelup/C.Fase3.dart';
-import'package:levelup/C.Fase4.dart';
-import'package:levelup/C.Fase5.dart';
-import'package:levelup/C.Fase6.dart';
-import'package:levelup/C.Fase7.dart';
-import'package:levelup/C.Fase8.dart';
+import'package:levelup/fases/C.Fase1.dart';
+import'package:levelup/fases/C.Fase2.dart';
+import'package:levelup/fases/C.Fase3.dart';
+import'package:levelup/fases/C.Fase4.dart';
+import'package:levelup/fases/C.Fase5.dart';
+import'package:levelup/fases/C.Fase6.dart';
+import'package:levelup/fases/C.Fase7.dart';
+import'package:levelup/fases/C.Fase8.dart';
 
 class TelaCiencias extends StatefulWidget {
   const TelaCiencias({super.key});

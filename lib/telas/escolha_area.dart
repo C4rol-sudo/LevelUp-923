@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:levelup/telas/tela_linguagens.dart';
-import 'package:levelup/telas/tela_ciencias.dart';
-import 'package:levelup/telas/tela_matematica.dart';
-import 'package:levelup/telas/tela_humanas.dart';
+import 'package:levelup/telas/linguagens.dart';
 
 class Escolha extends StatefulWidget {
   const Escolha({super.key});
@@ -49,7 +46,7 @@ class _EscolhaState extends State<Escolha> {
                   onPressed: (){
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const TelaLinguagens()),
+                      MaterialPageRoute(builder: (context) => const LFase1()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -88,10 +85,6 @@ class _EscolhaState extends State<Escolha> {
                 ElevatedButton(
 
                     onPressed: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const TelaHumanas()),
-                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFB0ECCF),
@@ -132,10 +125,6 @@ class _EscolhaState extends State<Escolha> {
               children: [
                 ElevatedButton(
                     onPressed: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const TelaCiencias()),
-                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFB3DBFD),
@@ -173,10 +162,6 @@ class _EscolhaState extends State<Escolha> {
                 const SizedBox(width: 15),
                 ElevatedButton(
                     onPressed: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const TelaMatematica()),
-                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFFFCE9C),

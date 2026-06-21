@@ -8,17 +8,18 @@ class EstruturaQuestao extends StatefulWidget {
   @override
   State<EstruturaQuestao> createState() => _EstruturaQuestaoState();
 }
-
 class _EstruturaQuestaoState extends State<EstruturaQuestao>{
   @override
   Widget build(BuildContext context){
     return Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text('Questão ${widget.questao.numero_questao}',
             style: GoogleFonts.inika(fontSize: 25, fontWeight: FontWeight.bold)
         ),
         const SizedBox(height:5),
         Text(widget.questao.texto,
+            textAlign: TextAlign.center,
             style: GoogleFonts.inika(fontSize: 15)),
         const SizedBox(height:5),
         Text(
@@ -58,6 +59,7 @@ class _EstruturaQuestaoState extends State<EstruturaQuestao>{
           onPressed: (){
           },
           style: ElevatedButton.styleFrom(
+
               backgroundColor: Color(0xFFF8E5F7),
               foregroundColor: Colors.black
           ),
@@ -81,6 +83,7 @@ class _EstruturaQuestaoState extends State<EstruturaQuestao>{
             ),
           ),
         ),
+        Divider(),
       ]
     );
 
