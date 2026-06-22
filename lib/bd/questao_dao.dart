@@ -3,7 +3,6 @@ import 'package:levelup/domain/questao.dart';
 import 'package:sqflite/sqflite.dart';
 
 class QuestaoDao{
-
   Future<List<Questao>> listarQuestoes() async {
     Database db = await DBHelper().initDB();
 
