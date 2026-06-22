@@ -16,7 +16,7 @@ class _CFase1State extends State<CFase1> {
       Scaffold
         (
         appBar: AppBar(
-          title: const Text('Ciências da Natureza - fase 1'),
+          title: Text('Ciências da Natureza - fase 1'),
             backgroundColor: Color(0xFF88BDED),
         ),
         body: ListView.builder(
