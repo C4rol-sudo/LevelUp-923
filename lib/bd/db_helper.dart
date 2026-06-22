@@ -4,9 +4,9 @@ import 'package:path/path.dart';
 
 class DBHelper{
 
-  initDB() async{
+  Future<Database> initDB() async{
     String path = await getDatabasesPath();
-    String dbName = 'levelup.db';
+    String dbName = 'levelup.bd';
     String dbPath = join(path, dbName);
 
     Database db = await openDatabase(dbPath, version: 1, onCreate: onCreateDB,);
@@ -62,7 +62,7 @@ class DBHelper{
     await db.execute(sql);
     sql = '''INSERT INTO QUESTAO(numero_questao, texto, enunciado, a1, a2, a3, a4) VALUES (4,
    'Isso aqui não é um cachimbo\nQuando lemos um anúncio publicitário, uma receita de bolo ou um manual de instruções, raramente pensamos na engrenagem que faz aquelas palavras funcionarem. O código — a língua portuguesa — serve aqui como uma ponte direta entre a intenção de quem escreve e a ação de quem lê. Mas quando a linguagem se volta sobre si mesma, como num poema que fala sobre o ato de escrever ou num dicionário que explica o significado da palavra palavra, o circuito muda de figura. O foco passa a ser o próprio instrumento.',
-   'O Texto III descreve um fenômeno em que a linguagem é utilizada para explicar ou falar sobre o próprio código linguístico. Esse mecanismo predomina em textos que manifestam a função',
+   'O texto acima descreve um fenômeno em que a linguagem é utilizada para explicar ou falar sobre o próprio código linguístico. Esse mecanismo predomina em textos que manifestam a função',
    'A) Apelativa (ou conativa), cujo objetivo principal é convencer e persuadir o leitor.',
    'B) Fática, que busca testar, prolongar ou interromper o canal de comunicação.',
    'C) Emotiva (ou expressiva), centrada nas sensações, sentimentos e opiniões do emissor.',
@@ -70,40 +70,38 @@ class DBHelper{
    ''';
     await db.execute(sql);
 
+    ///String sqlNatureza = '''
+   ///CREATE TABLE QUESTAO_NATUREZA(
+   ///id INTEGER PRIMARY KEY AUTOINCREMENTE,
+   ///materia TEXT NOT NULL,
+   ///numero_questao INTEGER NOT NULL,
+   ///texto TEXT NOT NULL,
+   ///enunciado TEXT NOT NULL,
+   ///a1 TEXT NOT NULL,
+   ///a2 TEXT NOT NULL,
+   ///a3 TEXT NOT NULL,
+   ///a4 TEXT NOT NULL,
+   ///a5 TEXT NOT NULL,
+   ///resposta_correta TEXT NOT NULL
+   ///);
+   ///''';
+    ///await bd.execute(sqlNatureza);
 
-    String sqlNatureza = '''
-   CREATE TABLE QUESTAO_NATUREZA(
-   id INTEGER PRIMARY KEY AUTOINCREMENTE,
-   materia TEXT NOT NULL,
-   numero_questao INTEGER NOT NULL,
-   texto TEXT NOT NULL,
-   enunciado TEXT NOT NULL,
-   a1 TEXT NOT NULL,
-   a2 TEXT NOT NULL,
-   a3 TEXT NOT NULL,
-   a4 TEXT NOT NULL,
-   a5 TEXT NOT NULL,
-   resposta_correta TEXT NOT NULL
-   );
-   ''';
-    await db.execute(sqlNatureza);
-
-
-    sqlNatureza = '''
-   INSERT INTO QUESTAO_NATUREZA(materia, numero_questao, texto, enunciado, a1, a2, a3, a4, resposta_correta)
-   VALUES (
-   'Biologia',
-   1,
-   'Cadeia alimentar: Capim -> Preá -> Cobra -> Gavião.',
-   'Se a população de preás diminuir, o que acontece com as cobras?',
-   'A) Aumentam de tamanho',
-   'B) Diminuem de tamanho',
-   'C) Mudam de comportamento',
-   'D) Não sofrem alteração',
-   );
-   ''';
-    await db.execute(sqlNatureza);
-
+    ///sqlNatureza = '''
+   ///INSERT INTO QUESTAO_NATUREZA(materia, numero_questao, texto, enunciado, a1, a2, a3, a4, resposta_correta)
+   ///VALUES (
+   ///'Biologia',
+   ///1,
+   ///'Cadeia alimentar: Capim -> Preá -> Cobra -> Gavião.',
+   ///'Se a população de preás diminuir, o que acontece com as cobras?',
+   ///'A) Aumentam de tamanho',
+   ///'B) Diminuem de tamanho',
+   ///'C) Mudam de comportamento',
+   ///'D) Não sofrem alteração',
+   ///'B) Diminuem de tamanho'
+   ///);
+   ///''';
+    ///await bd.execute(sqlNatureza);
 
   }
 }
