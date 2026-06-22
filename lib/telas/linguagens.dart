@@ -11,13 +11,12 @@ class LFase1 extends StatefulWidget {
 }
 
 class _LFase1State extends State<LFase1> {
-  // Criamos a variável que vai guardar a Future dos dados
+
   late Future<List<Questao>> _futureQuestoes;
 
   @override
   void initState() {
     super.initState();
-    // Iniciamos a busca dos dados logo na inicialização do widget
     _futureQuestoes = QuestaoDao().listarQuestoes();
   }
 
@@ -27,11 +26,9 @@ class _LFase1State extends State<LFase1> {
       appBar: AppBar(
         backgroundColor: const Color(0xFFE8ACE3),
       ),
-      // O FutureBuilder escuta o estado da sua requisição
       body: FutureBuilder<List<Questao>>(
         future: _futureQuestoes,
         builder: (context, snapshot) {
-          // 1. Enquanto estiver carregando, mostra o "loading"
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
               child: CircularProgressIndicator(
@@ -40,21 +37,18 @@ class _LFase1State extends State<LFase1> {
             );
           }
 
-          // 2. Se acontecer algum erro na busca dos dados
           if (snapshot.hasError) {
             return Center(
               child: Text('Erro ao carregar questões: ${snapshot.error}'),
             );
           }
 
-          // 3. Se os dados chegaram com sucesso, mas a lista está vazia
           if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return const Center(
               child: Text('Nenhuma questão encontrada.'),
             );
           }
 
-          // 4. Se tudo deu certo e temos dados, renderiza a lista
           final listaQuestoes = snapshot.data!;
 
           return ListView.builder(
