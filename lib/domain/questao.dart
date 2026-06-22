@@ -19,7 +19,7 @@ class Questao{
   });
 
   Questao.fromJson(Map<String, dynamic> json) {
-    numero_questao = json['numero_questao'].toInt();
+    numero_questao = json['numero_questao'];
     texto = json['texto'];
     enunciado = json['enunciado'];
     a1 = json['a1'];
