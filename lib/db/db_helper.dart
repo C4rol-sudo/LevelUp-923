@@ -15,22 +15,7 @@ class DBHelper{
 
   FutureOr<void> onCreateDB(Database db, int version) async{
 
-
-    await db.execute('''
- CREATE TABLE DESEMPENHO(
-   id INTEGER PRIMARY KEY AUTOINCREMENT,
-   materia TEXT NOT NULL,
-   acertos INTEGER NOT NULL,
-   total INTEGER NOT NULL
- );
-''');
-
-
-    await db.execute("INSERT INTO DESEMPENHO (materia, acertos, total) VALUES ('Linguagens', 32, 45);");
-    await db.execute("INSERT INTO DESEMPENHO (materia, acertos, total) VALUES ('Ciências Humanas', 28, 45);");
-    await db.execute("INSERT INTO DESEMPENHO (materia, acertos, total) VALUES ('Ciências da Natureza', 15, 45);");
-    await db.execute("INSERT INTO DESEMPENHO (materia, acertos, total) VALUES ('Matemática', 40, 45);");
-
+    //Tabelas
 
     String sql = '''
    CREATE TABLE QUESTAO(
@@ -45,6 +30,8 @@ class DBHelper{
    );
    ''';
     await db.execute(sql);
+
+    //Dados
 
     sql = '''INSERT INTO QUESTAO(numero_questao, texto, enunciado, a1, a2, a3, a4) VALUES (1,
    'Texto I: Empatia é a capacidade de se colocar no lugar do outro, de compreender os sentimentos e perspectivas alheias e de usar essa compreensão para guiar nossas ações. No ambiente digital, contudo, essa habilidade parece diluir-se por trás das telas, onde o distanciamento físico e o anonimato muitas vezes reduzem a percepção do impacto de nossas palavras.\nTexto II: As interações nas redes sociais frequentemente priorizam a velocidade em detrimento da profundidade. O clique rápido, o compartilhamento sem checagem e o comentário impulsivo criam um ecossistema onde a validação imediata (por meio de curtidas) se sobrepõe à escuta atenta. Para reverter esse cenário, urge o desenvolvimento de uma cidadania digital que inclua a prática consciente da alteridade.',
@@ -83,47 +70,38 @@ class DBHelper{
    ''';
     await db.execute(sql);
 
-    sql = '''CREATE TABLE RANKING (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    level TEXT NOT NULL
-    );''';
-    await db.execute(sql);
+    ///String sqlNatureza = '''
+   ///CREATE TABLE QUESTAO_NATUREZA(
+   ///id INTEGER PRIMARY KEY AUTOINCREMENTE,
+   ///materia TEXT NOT NULL,
+   ///numero_questao INTEGER NOT NULL,
+   ///texto TEXT NOT NULL,
+   ///enunciado TEXT NOT NULL,
+   ///a1 TEXT NOT NULL,
+   ///a2 TEXT NOT NULL,
+   ///a3 TEXT NOT NULL,
+   ///a4 TEXT NOT NULL,
+   ///a5 TEXT NOT NULL,
+   ///resposta_correta TEXT NOT NULL
+   ///);
+   ///''';
+    ///await bd.execute(sqlNatureza);
 
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Nany','LV.80');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Carol','LV.76');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Levi','LV.65');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Manoel','LV.64');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Brenda','LV.56');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Ysa','LV.54');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Davi','LV.51');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('havi','LV.45');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Luna','LV.43');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Kety','LV.35');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Lany','LV.23');''';
-    await db.execute(sql);
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Maya','LV.14');''';
-    await db.execute(sql);
-
-    sql = '''
-      CREATE TABLE USUARIO(
-      nome  TEXT PRIMARY KEY,
-      senha TEXT
-      )
-    ''';
-
-    sql = '''INSERT INTO USUARIO (nome,senha) VALUES ('Carol','123456');''';
-    await db.execute(sql);
+    ///sqlNatureza = '''
+   ///INSERT INTO QUESTAO_NATUREZA(materia, numero_questao, texto, enunciado, a1, a2, a3, a4, resposta_correta)
+   ///VALUES (
+   ///'Biologia',
+   ///1,
+   ///'Cadeia alimentar: Capim -> Preá -> Cobra -> Gavião.',
+   ///'Se a população de preás diminuir, o que acontece com as cobras?',
+   ///'A) Aumentam de tamanho',
+   ///'B) Diminuem de tamanho',
+   ///'C) Mudam de comportamento',
+   ///'D) Não sofrem alteração',
+   ///'B) Diminuem de tamanho'
+   ///);
+   ///''';
+    ///await bd.execute(sqlNatureza);
 
   }
 }

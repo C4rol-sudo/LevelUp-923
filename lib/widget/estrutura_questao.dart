@@ -75,7 +75,7 @@ class _EstruturaQuestaoState extends State<EstruturaQuestao>{
           },
           style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xFFF8E5F7),
-              foregroundColor: Colors.black
+              foregroundColor: Colors.white
           ),
           child: Text(
             widget.questao.a4,
