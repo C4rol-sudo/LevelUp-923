@@ -4,15 +4,17 @@ import 'package:sqflite/sqflite.dart';
 
 class QuestaoDao{
 
-  Future<void> listarQuestoes() async{
+  Future<List<Questao>> listarQuestoes() async{
 
     Database db = await DBHelper().initDB();
     var questoes = await db.rawQuery('SELECT * FROM QUESTAO;');
 
+    List<Questao> listaQuestoes = [];
+
     for(var json in questoes){
-      print(json);
+      Questao questao = Questao.fromJson(json);
+      listaQuestoes.add(questao);
     }
-
+    return listaQuestoes;
   }
-
 }

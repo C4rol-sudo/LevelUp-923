@@ -6,7 +6,7 @@ class DBHelper{
 
   Future<Database> initDB() async{
     String path = await getDatabasesPath();
-    String dbName = 'levelup.bd';
+    String dbName = 'levelup.db';
     String dbPath = join(path, dbName);
 
     Database db = await openDatabase(dbPath, version: 1, onCreate: onCreateDB,);
@@ -70,38 +70,38 @@ class DBHelper{
    ''';
     await db.execute(sql);
 
-    ///String sqlNatureza = '''
-   ///CREATE TABLE QUESTAO_NATUREZA(
-   ///id INTEGER PRIMARY KEY AUTOINCREMENTE,
-   ///materia TEXT NOT NULL,
-   ///numero_questao INTEGER NOT NULL,
-   ///texto TEXT NOT NULL,
-   ///enunciado TEXT NOT NULL,
-   ///a1 TEXT NOT NULL,
-   ///a2 TEXT NOT NULL,
-   ///a3 TEXT NOT NULL,
-   ///a4 TEXT NOT NULL,
-   ///a5 TEXT NOT NULL,
-   ///resposta_correta TEXT NOT NULL
-   ///);
-   ///''';
-    ///await bd.execute(sqlNatureza);
+    String sqlNatureza = '''
+   CREATE TABLE QUESTAO_NATUREZA(
+   id INTEGER PRIMARY KEY AUTOINCREMENTE,
+   materia TEXT NOT NULL,
+   numero_questao INTEGER NOT NULL,
+   texto TEXT NOT NULL,
+   enunciado TEXT NOT NULL,
+   a1 TEXT NOT NULL,
+   a2 TEXT NOT NULL,
+   a3 TEXT NOT NULL,
+   a4 TEXT NOT NULL,
+   a5 TEXT NOT NULL,
+   resposta_correta TEXT NOT NULL
+   );
+   ''';
+    await db.execute(sqlNatureza);
 
-    ///sqlNatureza = '''
-   ///INSERT INTO QUESTAO_NATUREZA(materia, numero_questao, texto, enunciado, a1, a2, a3, a4, resposta_correta)
-   ///VALUES (
-   ///'Biologia',
-   ///1,
-   ///'Cadeia alimentar: Capim -> Preá -> Cobra -> Gavião.',
-   ///'Se a população de preás diminuir, o que acontece com as cobras?',
-   ///'A) Aumentam de tamanho',
-   ///'B) Diminuem de tamanho',
-   ///'C) Mudam de comportamento',
-   ///'D) Não sofrem alteração',
-   ///'B) Diminuem de tamanho'
-   ///);
-   ///''';
-    ///await bd.execute(sqlNatureza);
+    sqlNatureza = '''
+   INSERT INTO QUESTAO_NATUREZA(materia, numero_questao, texto, enunciado, a1, a2, a3, a4, resposta_correta)
+   VALUES (
+   'Biologia',
+   1,
+   'Cadeia alimentar: Capim -> Preá -> Cobra -> Gavião.',
+   'Se a população de preás diminuir, o que acontece com as cobras?',
+   'A) Aumentam de tamanho',
+   'B) Diminuem de tamanho',
+   'C) Mudam de comportamento',
+   'D) Não sofrem alteração',
+   'B)'
+   );
+   ''';
+    await db.execute(sqlNatureza);
 
   }
 }
