@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:levelup/bd/db_helperconquistas.dart';
+
 class _ConquistasState extends State<Conquistas> {
  final DbHelperconquistas _dbHelper = DbHelperconquistas();
  
