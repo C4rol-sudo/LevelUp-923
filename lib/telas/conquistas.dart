@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:levelup/bd/db_helperconquistas.dart';
+import 'package:levelup/bd/DbHelperconquistas.dart';
 
-class Conquistas extends State<Conquistas> {
+class Conquistas extends StatefulWidget {
+  const Conquistas({super.key});
+
+  @override
+  State<Conquistas> createState() => _ConquistasState();
+}
+
+class _ConquistasState extends State<Conquistas>{
  final DbHelperconquistas _dbHelper = DbHelperconquistas();
  
  List<Map<String, dynamic>> listaConquistas = [];
@@ -55,7 +62,7 @@ class Conquistas extends State<Conquistas> {
 
 
            onTap: () async{
-               await _dbHelper.atualizarConquista(conquista['id']);
+               await _dbHelper.atualizarConquistas(conquista['id']);
 
 
                _carregarConquistas();
