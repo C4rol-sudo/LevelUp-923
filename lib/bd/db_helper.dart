@@ -15,6 +15,23 @@ class DBHelper{
 
   FutureOr<void> onCreateDB(Database db, int version) async{
 
+
+    await db.execute('''
+ CREATE TABLE DESEMPENHO(
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   materia TEXT NOT NULL,
+   acertos INTEGER NOT NULL,
+   total INTEGER NOT NULL
+ );
+''');
+
+
+    await db.execute("INSERT INTO DESEMPENHO (materia, acertos, total) VALUES ('Linguagens', 32, 45);");
+    await db.execute("INSERT INTO DESEMPENHO (materia, acertos, total) VALUES ('Ciências Humanas', 28, 45);");
+    await db.execute("INSERT INTO DESEMPENHO (materia, acertos, total) VALUES ('Ciências da Natureza', 15, 45);");
+    await db.execute("INSERT INTO DESEMPENHO (materia, acertos, total) VALUES ('Matemática', 40, 45);");
+
+
     String sql = '''
    CREATE TABLE QUESTAO(
    id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -65,39 +82,6 @@ class DBHelper{
    'D) Metalinguística, na qual o código é o tema e o meio de explicação da própria mensagem.');
    ''';
     await db.execute(sql);
-
-    ///String sqlNatureza = '''
-   ///CREATE TABLE QUESTAO_NATUREZA(
-   ///id INTEGER PRIMARY KEY AUTOINCREMENTE,
-   ///materia TEXT NOT NULL,
-   ///numero_questao INTEGER NOT NULL,
-   ///texto TEXT NOT NULL,
-   ///enunciado TEXT NOT NULL,
-   ///a1 TEXT NOT NULL,
-   ///a2 TEXT NOT NULL,
-   ///a3 TEXT NOT NULL,
-   ///a4 TEXT NOT NULL,
-   ///a5 TEXT NOT NULL,
-   ///resposta_correta TEXT NOT NULL
-   ///);
-   ///''';
-    ///await bd.execute(sqlNatureza);
-
-    ///sqlNatureza = '''
-   ///INSERT INTO QUESTAO_NATUREZA(materia, numero_questao, texto, enunciado, a1, a2, a3, a4, resposta_correta)
-   ///VALUES (
-   ///'Biologia',
-   ///1,
-   ///'Cadeia alimentar: Capim -> Preá -> Cobra -> Gavião.',
-   ///'Se a população de preás diminuir, o que acontece com as cobras?',
-   ///'A) Aumentam de tamanho',
-   ///'B) Diminuem de tamanho',
-   ///'C) Mudam de comportamento',
-   ///'D) Não sofrem alteração',
-   ///'B) Diminuem de tamanho'
-   ///);
-   ///''';
-    ///await bd.execute(sqlNatureza);
 
     sql = '''CREATE TABLE RANKING (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

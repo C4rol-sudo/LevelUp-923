@@ -25,17 +25,4 @@ class BancoDeDados{
     ),
 
   ];
-  static List questoesC = [
-    Questao(
-      numero_questao: 1,
-      texto: "Cadeia alimentar: Capim -> Preá -> Cobra -> Gavião.",
-      enunciado: "Se a população de preás diminuir, o que acontece com as cobras?",
-      a1: "A) Aumentam de tamanho",
-      a2: "B) Diminuem por falta de alimento",
-      a3: "C) Mudam de comportamento",
-      a4: "D) Não sofrem nenhuma ",
-    ),
-
-  ];
-
 }
