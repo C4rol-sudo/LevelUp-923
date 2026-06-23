@@ -2,10 +2,10 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
 class DbHelperconquistas {
-  
+
   initDB() async {
     String path = await getDatabasesPath();
-    String dbName = 'conquistas.db'; 
+    String dbName = 'conquistas.db';
     String dbPath = join(path, dbName);
 
     Database db = await openDatabase(dbPath, version: 1, onCreate: onCreateDB);
@@ -23,35 +23,32 @@ class DbHelperconquistas {
     ''';
     await db.execute(sql);
 
-    // Dados iniciais padrões
     await db.insert('CONQUISTAS', {
-      'titulo': 'Primeiro Passo', 
-      'descricao': 'Iniciou a jornada no app', 
+      'titulo': 'Primeiro Passo',
+      'descricao': 'Iniciou a jornada no app',
       'desbloqueado': 0
     });
-    
+
     await db.insert('CONQUISTAS', {
-      'titulo': 'Explorador de Humanas', 
-      'descricao': 'Acertou 5 questões de história', 
+      'titulo': 'Explorador de Humanas',
+      'descricao': 'Acertou 5 questões de história',
       'desbloqueado': 0
     });
   }
 
-  // Função para buscar suas conquistas no banco
+
   Future<List<Map<String, dynamic>>> buscarConquistas() async {
     Database db = await initDB();
     return await db.query('CONQUISTAS');
   }
 
-  // Função para atualizar o banco quando o usuário clicar
-  Future<int> atualizarConquista(int id) async {
+  Future<int> atualizarConquistas(int id) async {
     Database db = await initDB();
     return await db.update(
       'CONQUISTAS',
-      {'desbloqueado': 1}, 
+      {'desbloqueado': 1},
       where: 'id = ?',
       whereArgs: [id],
     );
   }
 }
-
