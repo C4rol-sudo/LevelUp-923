@@ -4,7 +4,6 @@ class Desempenho {
   final int acertos;
   final int total;
 
-
   Desempenho({
     this.id,
     required this.materia,
@@ -12,14 +11,12 @@ class Desempenho {
     required this.total
   });
 
-
   factory Desempenho.fromJson(Map<String, dynamic> json){
     return Desempenho(
       id: json['id'],
       materia: json['materia'],
       acertos: json['acertos'],
       total: json['total'],
-
 
     );
   }

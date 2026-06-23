@@ -7,19 +7,11 @@ class DesempenhoDao {
   Future<List<Desempenho>>listarDesempenho()async{
     Database db = await DBHelper().initDB();
     var listaresult = await db.rawQuery('SELECT*FROM DESEMPENHO');
-
-
     List<Desempenho> listaDesempenho = [];
-
-
     for (var json in listaresult){
       Desempenho desempenho = Desempenho.fromJson(json);
       listaDesempenho.add(desempenho);
     }
     return listaDesempenho;
-
-
-
-
   }
 }
