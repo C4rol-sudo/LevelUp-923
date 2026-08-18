@@ -114,5 +114,16 @@ class DBHelper{
     await db.execute(sql);
     sql = '''INSERT INTO RANKING (name,level) VALUES ('Maya','LV.14');''';
     await db.execute(sql);
+
+    sql = '''
+      CREATE TABLE USUARIO(
+      nome  TEXT PRIMARY KEY,
+      senha TEXT
+      )
+    ''';
+
+    sql = '''INSERT INTO USUARIO (nome,senha) VALUES ('Carol','123456');''';
+    await db.execute(sql);
+
   }
 }
