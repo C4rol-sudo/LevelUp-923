@@ -18,7 +18,7 @@ class _LFase1State extends State<LFase1> {
     carregarQuestoes();
   }
 
-  carregarQuestoes() async{
+  void carregarQuestoes() async{
     listaQuestoes = await QuestaoDao().listarQuestoes();
     setState(() {});
   }
