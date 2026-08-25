@@ -8,16 +8,6 @@ class Questao{
   late String a3;
   late String a4;
 
-  Questao({
-    required this.numero_questao,
-    required this.texto,
-    required this.enunciado,
-    required this.a1,
-    required this.a2,
-    required this.a3,
-    required this.a4,
-  });
-
   Questao.fromJson(Map<String, dynamic> json) {
     numero_questao = json['numero_questao'];
     texto = json['texto'];

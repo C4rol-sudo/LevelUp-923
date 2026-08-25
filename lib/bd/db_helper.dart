@@ -42,6 +42,7 @@ class DBHelper{
    'D) dinâmica de comunicação acelerada e do distanciamento físico gerado pelas telas.');
    ''';
     await db.execute(sql);
+
     sql = '''INSERT INTO QUESTAO(numero_questao, texto, enunciado, a1, a2, a3, a4) VALUES (2,
    'A rede social é o novo espaço de convivência, mas também de exclusão. Se por um lado democratiza o acesso à informação, por outro cria bolhas de confirmação onde o contraditório é silenciado pelo algoritmo.',
    'Considerando o texto, o impacto das redes sociais na organização social contemporânea revela uma contradição fundamentada na',
@@ -51,6 +52,7 @@ class DBHelper{
    'D) facilitação do acesso aos conteúdos em oposição à restrição de perspectivas diferentes.');
    ''';
     await db.execute(sql);
+
     sql = '''INSERT INTO QUESTAO(numero_questao, texto, enunciado, a1, a2, a3, a4) VALUES (3,
    'O quinze" não relata apenas a seca; relata a migração, a fome, a perda da dignidade humana diante da miséria. Chico Bento e sua família, ao cruzarem a caatinga esturricada, não lutam contra um fenômeno climático apenas, mas contra uma estrutura social que os abandona à própria sorte. A linguagem de Rachel de Queiroz, embora regional, alcança o universal ao tocar na dor do homem desamparado.',
    'O fragmento de texto crítico analisa a obra O Quinze, de Rachel de Queiroz, inserida na segunda fase do Modernismo brasileiro. A partir da leitura do texto, depreende-se que a relevância social da obra reside no fato de que ela',
@@ -60,6 +62,7 @@ class DBHelper{
    'D) propõe soluções governamentais definitivas para o problema da escassez de água na região.');
    ''';
     await db.execute(sql);
+
     sql = '''INSERT INTO QUESTAO(numero_questao, texto, enunciado, a1, a2, a3, a4) VALUES (4,
    'Isso aqui não é um cachimbo\nQuando lemos um anúncio publicitário, uma receita de bolo ou um manual de instruções, raramente pensamos na engrenagem que faz aquelas palavras funcionarem. O código — a língua portuguesa — serve aqui como uma ponte direta entre a intenção de quem escreve e a ação de quem lê. Mas quando a linguagem se volta sobre si mesma, como num poema que fala sobre o ato de escrever ou num dicionário que explica o significado da palavra palavra, o circuito muda de figura. O foco passa a ser o próprio instrumento.',
    'O texto acima descreve um fenômeno em que a linguagem é utilizada para explicar ou falar sobre o próprio código linguístico. Esse mecanismo predomina em textos que manifestam a função',
