@@ -11,18 +11,17 @@ class LFase1 extends StatefulWidget {
 }
 
 class _LFase1State extends State<LFase1> {
-  //List <Questao> listaQuestoes = [];
-  late Future<List<Questao>> futureLista;
+  List <Questao> listaQuestoes = [];
 
   void initState(){
     super.initState();
-    futureLista = QuestaoDao().listarQuestoes();
+    carregarQuestoes();
   }
 
-  //carregarQuestoes() async{
-    //listaQuestoes = await QuestaoDao().listarQuestoes();
-    //setState(() {});
-  //}
+  carregarQuestoes() async{
+    listaQuestoes = await QuestaoDao().listarQuestoes();
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context){
@@ -30,28 +29,14 @@ class _LFase1State extends State<LFase1> {
       appBar: AppBar(
         backgroundColor: const Color(0xFFE8ACE3),
       ),
-      body: FutureBuilder(
-          future: futureLista,
-          builder: (context, snapshot) {
-            if(snapshot.hasData){
-              List<Questao> listaQuestoes = snapshot.requireData;
-              return buildListView(listaQuestoes);
-            }
-            return Center(child: CircularProgressIndicator());
-          },
-          )
-
-
-    );
-
-  }
-  buildListView(List <Questao> listaQuestoes){
-    return ListView.builder(
+      body: ListView.builder(
         padding: const EdgeInsets.all(20),
         itemCount: listaQuestoes.length,
         itemBuilder: (context, i) {
           return EstruturaQuestao(questao: listaQuestoes[i]);
         }
+      )
     );
+
   }
 }
