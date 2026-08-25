@@ -47,13 +47,6 @@ class _TelaCienciasState extends State<TelaCiencias> {
                     children: [
                       const SizedBox(width: 55),
                       GestureDetector(
-                          onTap: () { Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => CFase1()
-                              )
-                          );
-                          },
                       child: HexagonWidget.flat(
                         width: 120,
                         color: Color(0xFF88BDED),
