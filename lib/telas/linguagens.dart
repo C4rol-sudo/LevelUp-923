@@ -27,7 +27,7 @@ class _LFase1State extends State<LFase1> {
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFFE8ACE3),
+        backgroundColor: const Color(0xFFED76CD),
       ),
       body: ListView.builder(
         padding: const EdgeInsets.all(20),

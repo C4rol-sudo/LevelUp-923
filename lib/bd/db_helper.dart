@@ -70,7 +70,50 @@ class DBHelper{
    ''';
     await db.execute(sql);
 
-    ///String sqlNatureza = '''
+    sql = '''CREATE TABLE RANKING (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          name TEXT NOT NULL,
+          level TEXT NOT NULL
+          );''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Nany','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Carol','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Levi','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Manoel','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Brenda','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Ysa','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Davi','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('havi','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Luna','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Kety','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Lany','LV.13');''';
+    await db.execute(sql);
+
+    sql = '''INSERT INTO RANKING (name,level) VALUES ('Maya','LV.13');''';
+    await db.execute(sql);
+
+///String sqlNatureza = '''
    ///CREATE TABLE QUESTAO_NATUREZA(
    ///id INTEGER PRIMARY KEY AUTOINCREMENTE,
    ///materia TEXT NOT NULL,

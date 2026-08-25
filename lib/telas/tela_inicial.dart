@@ -42,7 +42,7 @@ class _telainicial extends State<TelaInicial> {
           },
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Início'),
-            BottomNavigationBarItem(icon: Icon(Icons.bar_chart), label: 'Pontuação'),
+            BottomNavigationBarItem(icon: Icon(Icons.bar_chart), label: 'Ranking'),
             BottomNavigationBarItem(icon: Icon(Icons.emoji_events), label: 'Conquistas'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
           ],

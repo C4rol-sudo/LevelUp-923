@@ -20,7 +20,7 @@ class _PontuacaoState extends State<Pontuacao> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF898DE),
+      backgroundColor: const Color(0xFFFDB3E9),
       appBar: AppBar(
         backgroundColor: const Color(0xFFED76CD),
         elevation: 0,
@@ -96,7 +96,7 @@ class RankingCard extends StatelessWidget {
           const CircleAvatar(
             radius: 28,
             backgroundColor: Color(0xFFED76CD),
-            child: Icon(Icons.person, size: 30),
+            child: Icon(Icons.person, size: 30, color: Color(0xFFA62785)),
           ),
           const SizedBox(width: 16),
           Expanded(
@@ -106,12 +106,12 @@ class RankingCard extends StatelessWidget {
                 Text(
                   name,
                   style: GoogleFonts.inika(
-                    fontSize: 22,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,),
                 ),
                 Text(
                   "LV $level",
-                  style: GoogleFonts.poppins(fontSize: 16),
+                  style: GoogleFonts.poppins(fontSize: 12),
                 ),
               ],
             ),

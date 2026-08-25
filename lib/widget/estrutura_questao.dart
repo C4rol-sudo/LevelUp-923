@@ -31,7 +31,7 @@ class _EstruturaQuestaoState extends State<EstruturaQuestao>{
             onPressed: (){
             },
             style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFF8E5F7),
+                backgroundColor: Color(0xFFFDB3E9),
                 foregroundColor: Colors.black
             ),
             child: Text(
@@ -45,7 +45,7 @@ class _EstruturaQuestaoState extends State<EstruturaQuestao>{
           onPressed: (){
           },
           style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFFF8E5F7),
+              backgroundColor: Color(0xFFFDB3E9),
               foregroundColor: Colors.black
           ),
           child: Text(
@@ -60,7 +60,7 @@ class _EstruturaQuestaoState extends State<EstruturaQuestao>{
           },
           style: ElevatedButton.styleFrom(
 
-              backgroundColor: Color(0xFFF8E5F7),
+              backgroundColor: Color(0xFFFDB3E9),
               foregroundColor: Colors.black
           ),
           child: Text(
@@ -74,7 +74,7 @@ class _EstruturaQuestaoState extends State<EstruturaQuestao>{
           onPressed: (){
           },
           style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFFF8E5F7),
+              backgroundColor: Color(0xFFFDB3E9),
               foregroundColor: Colors.black
           ),
           child: Text(
