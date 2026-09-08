@@ -1,153 +1,64 @@
 import 'dart:async';
-import 'package:sqflite/sqflite.dart';
+
 import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
-class DBHelper{
-
-  Future<Database> initDB() async{
+class DBHelper {
+  // await -> async e Future<TipoDeRetorno>
+  Future<Database> initDB() async {
+    // Onde salvar o Banco de Dados
+    // C:/database/name
     String path = await getDatabasesPath();
-    String dbName = 'levelup.db';
+    // Nome do banco
+    String dbName = 'airbnb-1.db';
+
+    // Path do Banco de Dados + Nome do Banco
     String dbPath = join(path, dbName);
 
-    Database db = await openDatabase(dbPath, version: 1, onCreate: onCreateDB,);
+    // Criar e/ou Abrir o Banco de Dados
+    Database db = await openDatabase(dbPath, version: 1, onCreate: onCreateDB);
+
     return db;
   }
 
-  FutureOr<void> onCreateDB(Database db, int version) async{
+  FutureOr<void> onCreateDB(Database db, int version) async {
+    String sql = ''' CREATE TABLE PROPRIEDADE (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            total REAL NOT NULL,
+            avaliacao REAL,
+            dates TEXT,
+            local TEXT,
+            host TEXT,
+            urlImagem TEXT
+        );''';
 
-    //Tabelas
-
-    String sql = '''
-   CREATE TABLE QUESTAO(
-   id INTEGER PRIMARY KEY AUTOINCREMENT,
-   numero_questao INTEGER NOT NULL,
-   texto TEXT NOT NULL,
-   enunciado TEXT NOT NULL,
-   a1 TEXT NOT NULL,
-   a2 TEXT NOT NULL,
-   a3 TEXT NOT NULL,
-   a4 TEXT NOT NULL
-   );
-   ''';
     await db.execute(sql);
 
-    //Dados
-
-    sql = '''INSERT INTO QUESTAO(numero_questao, texto, enunciado, a1, a2, a3, a4) VALUES (1,
-   'Texto I: Empatia é a capacidade de se colocar no lugar do outro, de compreender os sentimentos e perspectivas alheias e de usar essa compreensão para guiar nossas ações. No ambiente digital, contudo, essa habilidade parece diluir-se por trás das telas, onde o distanciamento físico e o anonimato muitas vezes reduzem a percepção do impacto de nossas palavras.\nTexto II: As interações nas redes sociais frequentemente priorizam a velocidade em detrimento da profundidade. O clique rápido, o compartilhamento sem checagem e o comentário impulsivo criam um ecossistema onde a validação imediata (por meio de curtidas) se sobrepõe à escuta atenta. Para reverter esse cenário, urge o desenvolvimento de uma cidadania digital que inclua a prática consciente da alteridade.',
-  'Considerando os dois textos, o principal desafio para o exercício da empatia nas redes sociais virtuais reside na',
-   'A) necessidade de as plataformas digitais banirem o uso de perfis anônimos.',
-   'B) ausência de ferramentas tecnológicas que permitam a expressar emoções complexas.',
-   'C) falta de políticas públicas severas para a punição de discursos de ódio.',
-   'D) dinâmica de comunicação acelerada e do distanciamento físico gerado pelas telas.');
-   ''';
+    sql =
+    "INSERT INTO Propriedade (total, avaliacao, dates, local, host, urlImagem) VALUES (2225.000, 4.80, '10-31 Dec', 'Harlingen, Netherlands', 'Professional Host', 'https://news.airbnb.com/wp-content/uploads/sites/4/2019/06/PJM020719Q202_Luxe_WanakaNZ_LivingRoom_0264-LightOn_R1.jpg?fit=3200%2C2133');";
     await db.execute(sql);
 
-    sql = '''INSERT INTO QUESTAO(numero_questao, texto, enunciado, a1, a2, a3, a4) VALUES (2,
-   'A rede social é o novo espaço de convivência, mas também de exclusão. Se por um lado democratiza o acesso à informação, por outro cria bolhas de confirmação onde o contraditório é silenciado pelo algoritmo.',
-   'Considerando o texto, o impacto das redes sociais na organização social contemporânea revela uma contradição fundamentada na',
-   'A) expansão da cominicação digital em detrimento da privacidade dos usuários de dados.',
-   'B) superação das barreiras geográficas em contraste com a lentidão dos processos de interação.',
-   'C) universalização do saber aliada ao fortalecimento do debate democrático real.',
-   'D) facilitação do acesso aos conteúdos em oposição à restrição de perspectivas diferentes.');
-   ''';
+    sql =
+    "INSERT INTO Propriedade (total, avaliacao, dates, local, host, urlImagem) VALUES (1850.000, 4.92, '20-28 Jul', 'Campos do Jordão, Brazil', 'Superhost', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/667104136.jpg?k=0232c39cb40c3b9c7c3b60b2c5c9fa1d0c7c25b4e20e3354ae71df528b0a13a9&o=&hp=1');";
     await db.execute(sql);
 
-    sql = '''INSERT INTO QUESTAO(numero_questao, texto, enunciado, a1, a2, a3, a4) VALUES (3,
-   'O quinze" não relata apenas a seca; relata a migração, a fome, a perda da dignidade humana diante da miséria. Chico Bento e sua família, ao cruzarem a caatinga esturricada, não lutam contra um fenômeno climático apenas, mas contra uma estrutura social que os abandona à própria sorte. A linguagem de Rachel de Queiroz, embora regional, alcança o universal ao tocar na dor do homem desamparado.',
-   'O fragmento de texto crítico analisa a obra O Quinze, de Rachel de Queiroz, inserida na segunda fase do Modernismo brasileiro. A partir da leitura do texto, depreende-se que a relevância social da obra reside no fato de que ela',
-   'A) limita-se a documentar os aspectos climáticos rigorosos do Nordeste brasileiro.',
-   'B) adota uma linguagem técnica e formal para descrever o fenômeno da transumância.',
-   'C) utiliza a temática da seca como pano de fundo para denunciar o descaso social com o retirante.',
-   'D) propõe soluções governamentais definitivas para o problema da escassez de água na região.');
-   ''';
+    sql =
+    "INSERT INTO Propriedade (total, avaliacao, dates, local, host, urlImagem) VALUES (980.000, 4.75, '05-15 Sep', 'Lisbon, Portugal', 'Professional Host', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/82990832.jpg?k=83c1b95f88126bb3f1d822c19654c1ff5e1b037c4d25042dbd82112e25331afb&o=&hp=1');";
     await db.execute(sql);
 
-    sql = '''INSERT INTO QUESTAO(numero_questao, texto, enunciado, a1, a2, a3, a4) VALUES (4,
-   'Isso aqui não é um cachimbo\nQuando lemos um anúncio publicitário, uma receita de bolo ou um manual de instruções, raramente pensamos na engrenagem que faz aquelas palavras funcionarem. O código — a língua portuguesa — serve aqui como uma ponte direta entre a intenção de quem escreve e a ação de quem lê. Mas quando a linguagem se volta sobre si mesma, como num poema que fala sobre o ato de escrever ou num dicionário que explica o significado da palavra palavra, o circuito muda de figura. O foco passa a ser o próprio instrumento.',
-   'O texto acima descreve um fenômeno em que a linguagem é utilizada para explicar ou falar sobre o próprio código linguístico. Esse mecanismo predomina em textos que manifestam a função',
-   'A) Apelativa (ou conativa), cujo objetivo principal é convencer e persuadir o leitor.',
-   'B) Fática, que busca testar, prolongar ou interromper o canal de comunicação.',
-   'C) Emotiva (ou expressiva), centrada nas sensações, sentimentos e opiniões do emissor.',
-   'D) Metalinguística, na qual o código é o tema e o meio de explicação da própria mensagem.');
-   ''';
+    sql =
+    "INSERT INTO Propriedade (total, avaliacao, dates, local, host, urlImagem) VALUES (3200.000, 4.98, '28 Dec - 05 Jan', 'Florianópolis, Brazil', 'Superhost', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/173625874.jpg?k=5d9a7d0bcdb33c8c6959ac1d03cd869a7a34cbc1e16485486e518fb846fb664a&o=&hp=1');";
     await db.execute(sql);
 
-    sql = '''CREATE TABLE RANKING (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          name TEXT NOT NULL,
-          level TEXT NOT NULL
-          );''';
+    sql = ''' 
+        CREATE TABLE USER (
+            username TEXT PRIMARY KEY,
+            password TEXT
+        );''';
+
     await db.execute(sql);
 
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Nany','LV.13');''';
+    sql = "INSERT INTO USER (username, password) VALUES ('joao@gmail.com', '123456');";
     await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Carol','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Levi','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Manoel','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Brenda','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Ysa','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Davi','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('havi','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Luna','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Kety','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Lany','LV.13');''';
-    await db.execute(sql);
-
-    sql = '''INSERT INTO RANKING (name,level) VALUES ('Maya','LV.13');''';
-    await db.execute(sql);
-
-///String sqlNatureza = '''
-   ///CREATE TABLE QUESTAO_NATUREZA(
-   ///id INTEGER PRIMARY KEY AUTOINCREMENTE,
-   ///materia TEXT NOT NULL,
-   ///numero_questao INTEGER NOT NULL,
-   ///texto TEXT NOT NULL,
-   ///enunciado TEXT NOT NULL,
-   ///a1 TEXT NOT NULL,
-   ///a2 TEXT NOT NULL,
-   ///a3 TEXT NOT NULL,
-   ///a4 TEXT NOT NULL,
-   ///a5 TEXT NOT NULL,
-   ///resposta_correta TEXT NOT NULL
-   ///);
-   ///''';
-    ///await db.execute(sqlNatureza);
-
-    ///sqlNatureza = '''
-   ///INSERT INTO QUESTAO_NATUREZA(materia, numero_questao, texto, enunciado, a1, a2, a3, a4, resposta_correta)
-   ///VALUES (
-   ///'Biologia',
-   ///1,
-   ///'Cadeia alimentar: Capim -> Preá -> Cobra -> Gavião.',
-   ///'Se a população de preás diminuir, o que acontece com as cobras?',
-   ///'A) Aumentam de tamanho',
-   ///'B) Diminuem de tamanho',
-   ///'C) Mudam de comportamento',
-   ///'D) Não sofrem alteração',
-   ///'B) Diminuem de tamanho'
-   ///);
-   ///''';
-    ///await db.execute(sqlNatureza);
-
   }
 }

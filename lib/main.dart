@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:levelup/telas/tela_inicial.dart';
+import 'package:levelup/telas/tela_login.dart';
 
 void main() {
 
-  runApp(MaterialApp(home: TelaInicial()));
+  runApp(MaterialApp(home: TelaLogin()));
 
 }
