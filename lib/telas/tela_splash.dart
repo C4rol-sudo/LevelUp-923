@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:levelup/telas/tela_inicial.dart';
 import 'package:levelup/shared_prefs.dart';
+import 'tela_login.dart';
 
 
 class TelaSplash extends StatefulWidget {
@@ -41,7 +42,7 @@ class _TelaSplashState extends State<TelaSplash> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return TelaInicial();
+            return TelaLogin();
           },
         ),
       );

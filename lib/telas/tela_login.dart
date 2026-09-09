@@ -149,7 +149,7 @@ class _TelaLogin extends State<TelaLogin> {
 
 
     bool isAuth = await UserDao().login(username, password);
-    // if (user == 'joao@gmail.com' && password == '123456'){
+    // if (user == 'marina@gmail.com' && password == '123456'){
 
     if (isAuth) {
       Navigator
@@ -164,9 +164,9 @@ class _TelaLogin extends State<TelaLogin> {
 
 
       final prefs = await SharedPreferences.getInstance();
-      prefs.setBool('usuario', true);
+      prefs.setBool('usuário', true);
     } else {
-      print('User e/ou password incorretos');
+      print('Usuário ou senha incorretos');
     }
   }
 
