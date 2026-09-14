@@ -15,7 +15,6 @@ class SharedPrefs {
     // } else {
     //   return status; // true ou false
     // }
-
     return status ?? false;
   }
 }

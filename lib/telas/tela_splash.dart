@@ -46,7 +46,6 @@ class _TelaSplashState extends State<TelaSplash> {
       );
     }
 
-
   }
   @override
   Widget build(BuildContext context) {

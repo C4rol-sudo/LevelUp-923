@@ -154,14 +154,12 @@ class _TelaLogin extends State<TelaLogin> {
     }
   }
 
-
   buildPasswordOutlineInputBorder() {
     return OutlineInputBorder(
       borderSide: const BorderSide(color: Colors.grey, width: 1.5),
       borderRadius: BorderRadius.circular(20),
     );
   }
-
 
   buildUserOutlineInputBorder() {
     return OutlineInputBorder(

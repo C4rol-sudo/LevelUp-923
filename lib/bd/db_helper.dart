@@ -126,9 +126,6 @@ class DBHelper {
   ''';
     await db.execute(sqlNatureza);
 
-
-
-
     sqlNatureza = '''
   INSERT INTO QUESTAO_NATUREZA(materia, numero_questao, texto, enunciado, a1, a2, a3, a4)
   VALUES (
