@@ -7,7 +7,6 @@ import 'tela_login.dart';
 class TelaSplash extends StatefulWidget {
   const TelaSplash({super.key});
 
-
   @override
   State<TelaSplash> createState() => _TelaSplashState();
 }
@@ -26,8 +25,7 @@ class _TelaSplashState extends State<TelaSplash> {
     await Future.delayed(Duration(seconds: 2));
 
 
-    // status == true --> true
-    // status == true --> false
+   if(!mounted) return;
     if (status) {
       Navigator.pushReplacement(
         context,
