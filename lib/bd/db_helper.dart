@@ -53,7 +53,7 @@ class DBHelper {
     await db.execute("INSERT INTO DESEMPENHO (materia, acertos, total) VALUES ('Matemática', 40, 45);");
 
 
-    String _sql = '''
+  sql = '''
   CREATE TABLE QUESTAO(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   numero_questao INTEGER NOT NULL,
