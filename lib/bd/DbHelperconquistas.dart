@@ -34,6 +34,24 @@ class DbHelperconquistas {
       'descricao': 'Acertou 5 questões de história',
       'desbloqueado': 0
     });
+
+    await db.insert('CONQUISTAS', {
+      'titulo': 'Mestre de Exatas',
+      'descricao': 'Acertou 5 questões de matemática',
+      'desbloqueado': 0
+    });
+
+    await db.insert('CONQUISTAS', {
+      'titulo': 'Imparável',
+      'descricao': 'Estudou por 3 dias seguidos',
+      'desbloqueado': 0
+    });
+
+    await db.insert('CONQUISTAS', {
+      'titulo': 'Perfeição',
+      'descricao': 'Acertou todas as questões de um quiz',
+      'desbloqueado': 0
+    });
   }
 
 
