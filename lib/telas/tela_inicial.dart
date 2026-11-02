@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:levelup/telas/pontuacao.dart';
 import 'package:levelup/telas/conquistas.dart';
 import 'package:levelup/telas/perfil.dart';
-import 'package:levelup/telas/configuracoes.dart';
+import 'package:levelup/telas/tela_universidades.dart';
 import 'package:levelup/telas/escolha_area.dart';
 
 class TelaInicial extends StatefulWidget {
@@ -72,13 +72,13 @@ class TelaInicio extends StatelessWidget {
                 child: IconButton(
                   iconSize: 35,
                   icon: const Icon(
-                    Icons.settings,
+                    Icons.school,
                     color: Color(0xFFBDE0FE),
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Configuracoes()),
+                      MaterialPageRoute(builder: (context) => const TelaUniversidades()),
                     );
                   },
                 ),
